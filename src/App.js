@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import CoursesType from './components/CoursesType/CoursesType'
+import Course from './components/Course/Course'
+import CourseOffering from './components/CourseOffering/CourseOffering'
+import StudentRegistration from './components/Student/StudentRegistration'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h1
+        style={{ textAlign: "center", marginBottom:"50px" }}
+      >
+        {"Student Registration Form"}
+      </h1>
+      <CoursesType />
+      <Course />
+      <CourseOffering />
+      <StudentRegistration />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
