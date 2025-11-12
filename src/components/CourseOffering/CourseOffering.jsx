@@ -24,7 +24,9 @@ const CourseOffering = () => {
     };
 
     const deleteOfferingCourse = (index) => {
-        setCourseOfferings(prev => prev.filter((_, i) => i !== index));
+        if (window.confirm("Are you sure want to delete this offering course")) {
+            setCourseOfferings(prev => prev.filter((_,i) => i !== index));
+        }
     }
 
     const updateCourseOffering = (offering, index) => {

@@ -16,7 +16,9 @@ const Course = () => {
     }
 
     const deleteCourse = (courseType) => {
-        setCourses(prev => prev.filter(coursesType => coursesType !== courseType));
+        if (window.confirm("Are you sure want to delete this course")) {
+            setCourses(prev => prev.filter(coursesType => coursesType !== courseType));
+        }
     };
 
     const updateCourse = (courseType, key) => {
